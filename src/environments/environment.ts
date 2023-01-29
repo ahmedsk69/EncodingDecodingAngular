@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  Web_API:'ahmed.shaikh786999@gmail.com/api/',
+  Web_API:'https://ahmedshaikh098.bsite.net/api/',
 };
 
 /*
