@@ -10,12 +10,36 @@ export class ApiService {
 
   }
   readonly BaseURI = environment.Web_API;
-
+ 
+  Login(data:any) {
+    
+    let newdata= JSON.stringify (data)
+    return this.http.post(this.BaseURI + 'User/Login',String(newdata)  );
+  }
+  GetMaharajaPasswordUser(data:any) {
+    let newdata= JSON.stringify (data)
+    
+    return this.http.post(this.BaseURI + 'User/GetMaharajaPassword',newdata);
+  }
+  GetMaharajaPasswordAdmin(data:any) {
+    let newdata= JSON.stringify (data)
+   
+    return this.http.post(this.BaseURI + 'Admin/GetMaharajaPassword',newdata);
+  }
+  ChangeMaharajaPassword(data:any) {
+    let newdata= JSON.stringify (data)
+    
+    return this.http.post(this.BaseURI + 'Admin/ChangeMaharajaPassword',newdata);
+  }
   
-  GetData(data:any) {
-    var newdata ={
-      data:data
-    }
-    return this.http.post(this.BaseURI + 'WeatherForecast/Hello',data);
+  ChangeUserCredaintial(data:any) {
+    let newdata= JSON.stringify (data)
+    
+    return this.http.post(this.BaseURI + 'Admin/ChangeUserCredaintial',newdata);
+  }
+  ChangeAdminCredaintial(data:any) {
+    let newdata= JSON.stringify (data)
+    
+    return this.http.post(this.BaseURI + 'Admin/ChangeAdminCredaintial',newdata);
   }
 }

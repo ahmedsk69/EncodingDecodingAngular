@@ -1,0 +1,120 @@
+
+<div class="container col-md-6 offset-md-3 mt-5">
+
+    <div class="card">
+        <h4 class="card-header">Panel</h4>
+        <div class="card-body">
+           
+                <div>
+                    <button  type="submit" (click)="GetMaharajaPassword()"  class="btn btn-primary">
+                        Get Maharaja Current Password
+                    </button>
+
+                    
+                    <button  type="submit" style="margin-left: 35px;" (click)="logout()"  class="btn btn-primary">
+                         Logout
+                    </button>
+                </div>
+                <br/>
+                <div class="mb-3 ">
+                    <label class="form-label">Password :</label> {{ this.MaharajaCurrentPassword}}
+                </div>
+            
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <div class="card">
+        <h4 class="card-header">Change Maharaja Password</h4>
+        <div class="card-body">
+            
+                <div class="mb-3">
+                    <label class="form-label">New Password</label>
+                    <input  [(ngModel)]="MaharajanewPassword" type="password"   class="form-control" />
+                   
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Confirm Password</label>
+                    <input   [(ngModel)]="MaharajaConfirmPassword"  type="password"   class="form-control" />
+                   
+                </div>
+              
+                <div>
+                    <button  (click)="ChangeMaharajaPassword()"  type='button'  class="btn btn-primary">
+                       
+                        Change Password
+                    </button>
+                </div>
+            
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <div class="card">
+        <h4 class="card-header">Change User Credailtail</h4>
+        <div class="card-body">
+            
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="password"    [(ngModel)]="UsernewName"  class="form-control" />
+               
+            </div>
+                <div class="mb-3">
+                    <label class="form-label">New Password</label>
+                    <input type="password"    [(ngModel)]="UsernewPassword"  class="form-control" />
+                   
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="password"   [(ngModel)]="UserConfirmPassword"   class="form-control" />
+                   
+                </div>
+              
+                <div>
+                    <button   (click)="ChangeUserCredailtail()"  type='button'  class="btn btn-primary">
+                       
+                        Change Credailtail
+                    </button>
+                </div>
+            
+        </div>
+    </div>
+
+    
+    <br/>
+    <br/>
+    <br/>
+    <div class="card">
+        <h4 class="card-header">Change Admin Credailtail</h4>
+        <div class="card-body">
+            
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="password"    [(ngModel)]="AdminnewName"  class="form-control" />
+               
+            </div>
+                <div class="mb-3">
+                    <label class="form-label">New Password</label>
+                    <input type="password"   [(ngModel)]="AdminnewPassword"   class="form-control" />
+                   
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="password"   [(ngModel)]="AdminConfirmPassword"   class="form-control" />
+                   
+                </div>
+              
+                <div>
+                    <button  type='button'   (click)="ChangeAdminCredailtail()"  class="btn btn-primary">
+                       
+                        Change Credailtail
+                    </button>
+                </div>
+            
+        </div>
+    </div>
+</div>

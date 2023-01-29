@@ -5,15 +5,24 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppHttpInterceptor } from './app-http-interceptor.service';
 import { DatePipe } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+import { ADashboardComponent } from './Admin/dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './component/alert/alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    ADashboardComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {
